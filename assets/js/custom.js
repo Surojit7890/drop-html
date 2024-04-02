@@ -397,9 +397,58 @@
         jQuery('body').css({ 'overflow-y': 'scroll' });
     });
 
+    // Shoew Modal
+    // var myModal = new bootstrap.Modal(document.getElementById('subscribeModal'), {})
+    // myModal.show()
+    // Password Toggle
+    jQuery(function () {
+        jQuery("#loginPasswordToggle").click(function () {
+            if (jQuery(this).hasClass("la-eye-slash")) {
+                jQuery(this).removeClass("la-eye-slash")
 
+                jQuery(this).addClass("la-eye")
 
+                jQuery("#loginPassword").attr("type", "text")
+            } else {
+                jQuery(this).removeClass("la-eye")
 
+                jQuery(this).addClass("la-eye-slash")
+
+                jQuery("#loginPassword").attr("type", "password")
+            }
+        })
+    })
+    jQuery(function () {
+        jQuery("#registerPasswordToggle").click(function () {
+            if (jQuery(this).hasClass("la-eye-slash")) {
+                jQuery(this).removeClass("la-eye-slash")
+
+                jQuery(this).addClass("la-eye")
+
+                jQuery("#registerPassword").attr("type", "text")
+            } else {
+                jQuery(this).removeClass("la-eye")
+
+                jQuery(this).addClass("la-eye-slash")
+
+                jQuery("#registerPassword").attr("type", "password")
+            }
+        })
+    })
+
+    // DatePicker
+    if (jQuery.fn.datepicker) {
+        jQuery(function () {
+            jQuery(".datepicker").datepicker({
+                dateFormat: "yy-mm-dd",
+                changeMonth: true,
+                changeYear: true,
+                // maxDate: "-16Y",
+                minDate: "-100Y",
+                // yearRange: "-100:-16"
+            });
+        });
+    }
 })(jQuery)
 
 // Countdown

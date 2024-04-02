@@ -1,6 +1,5 @@
 /* Responsive */
 
-
 @media (max-width: 991px) {
 	.logo {
 		width: 250px;
@@ -18,11 +17,11 @@
 	.hdr_menu {
 		position: fixed;
 		top: 0;
-		right: 0;
+		left: 0;
 		bottom: 0;
 		width: 100%;
 		max-width: 400px;
-		transform: translateX(100%);
+		transform: translateX(-100%);
 		background: #fff;
 		overflow-y: auto;
 		transition: transform 0.5s cubic-bezier(0.07, 0.23, 0.34, 1);
@@ -37,6 +36,7 @@
 	.hdr_menu ul li {
 		width: 100%;
 		transition: all 0.4s ease-in-out;
+		margin-bottom: 15px;
 	}
 
 	.hdr_menu ul li.menu-item-has-children .sub-menu {
@@ -66,7 +66,7 @@
 	}
 
 	.hdr_menu li a {
-		font-size: 15px;
+		font-size: 20px;
 		font-weight: 400;
 		display: block;
 		color: #000000;
@@ -121,20 +121,20 @@
 	}
 
 	.menu_btn {
-		width: 30px;
+		width: 20px;
 		display: block;
 	}
 
 	.menu_btn span {
 		height: 2px;
 		display: block;
-		background: #ef6130;
+		background: #000000;
 		margin-left: auto;
 		transition: 0.4s;
 	}
 
 	.menu_btn span:nth-child(2) {
-		width: 80%;
+		width: 100%;
 	}
 
 	.menu_btn span + span {
@@ -143,7 +143,7 @@
 
 	.menu_trigger {
 		position: absolute;
-		right: 0;
+		left: 0;
 		top: 50%;
 		z-index: 100;
 		transform: translateY(-50%);
@@ -154,10 +154,11 @@
 	}
 
 	.mobile_menu_active .menu_trigger {
-		right: 20px;
+		right: auto;
+		left: 360px;
 		top: 25px;
 		transform: none;
-		position: fixed;
+		position: absolute;
 	}
 
 	.mobile_menu_active .hdr_menu {
@@ -175,7 +176,7 @@
 	}
 
 	.mobile_menu_active .menu_btn span {
-		background: #688238;
+		background: #000000;
 	}
 
 	.mobile_menu_active .menu_btn span:first-child {
@@ -223,9 +224,67 @@
 	.hdr_menu li.menu-item-has-children .sub-menu li.current-menu-item a {
 		padding-left: 0;
 	}
-	
+	.responsive-menu-additional-components {
+		display: none !important;
+	}
+	.sale-countdown-banner-wrapper .banner-media {
+		height: calc(100vh - 83px);
+	}
 }
 
 @media (max-width: 767px) {
-	
+	.header-action-item .item:nth-child(1),
+	.header-action-item .item:nth-child(2) {
+		display: none;
+	}
+	.logo {
+		width: 100px;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.shop-btn-holder {
+		gap: 0 8px;
+	}
+	.coundwon-data-outer h2 {
+		font-size: 48px;
+	}
+	.coundwon-data-outer p {
+		font-size: 20px;
+	}
+	.banner-newsletter-outer {
+		padding: 0 15px;
+		margin-top: 40px;
+	}
+	.banner-newsletter-outer .submit-field .btn {
+		font-size: 15px;
+		padding: 0 20px;
+		display: flex;
+		align-items: center;
+	}
+	.banner-newsletter-outer .terms-data p {
+		text-align: center;
+	}
+	.sale-countdown-banner-wrapper .banner-media {
+		height: calc(100vh - 46px);
+	}
+	.banner-content-outer {
+		bottom: auto;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.hdr_menu {
+		max-width: 100%;
+	}
+	.mobile_menu_active .menu_trigger {
+		right: auto;
+		left: 20px;
+		top: 43px;
+	}
+	.responisve-logo {
+		display: block !important;
+		margin-top: 20px;
+		max-width: 150px;
+		margin-left: auto;
+	}
 }
