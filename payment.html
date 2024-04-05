@@ -25,12 +25,21 @@
 
 	<body>
 		<div class="trigger-btn text-center" style="padding: 200px 0;">
-			<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#paymentModal" class="btn btn-black">
-				Trigger Payment Modal
+			<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#paymentModalOne"
+				class="btn btn-black">
+				Payment Modal One
+			</a>
+			<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#paymentModalTwo"
+				class="btn btn-black">
+				Payment Modal Two
+			</a>
+			<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#registrationSuccess"
+				class="btn btn-black">
+				Success Registration
 			</a>
 		</div>
 		<!-- payment-modal -->
-		<div class="modal fade" id="paymentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		<div class="modal fade" id="paymentModalOne" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
 			aria-labelledby="staticBackdropLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
@@ -208,198 +217,8 @@
 		<!-- payment-modal -->
 
 
-		<!-- login-modal -->
-		<div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-			aria-labelledby="staticBackdropLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<p class="modal-title">1. LOG IN or subscribe</p>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<div class="login-form-outer">
-							<div class="form-holder">
-								<form>
-									<div class="row form-row">
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label for="loginEmail">Email *</label>
-												<input type="email" class="form-control" id="loginEmail"
-													placeholder="Email" required>
-												<i class="bar"></i>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label for="loginPassword">Password *</label>
-												<div class="password-field-holder">
-													<input type="password" class="form-control" id="loginPassword"
-														placeholder="Password" required>
-													<i class="bar"></i>
-													<div class="password-toggle">
-														<i class="las la-eye-slash" id="loginPasswordToggle"></i>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="submit-field text-center">
-												<button type="submit" class="btn btn-black">SIGN IN</button>
-												<div class="forgot-password-btn">
-													<a href="javascript:void(0);">Forgot your password?</a>
-												</div>
-											</div>
-										</div>
-										<!-- form-col -->
-									</div>
-								</form>
-								<div class="register-btn text-center">
-									<p>You don’t have an account? <a href="javascript:void(0);" data-bs-toggle="modal"
-											data-bs-target="#subscribeModal">Register</a></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- login-modal -->
-
-		<!-- subscribe-modal -->
-		<div class="modal fade" id="subscribeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-			aria-labelledby="staticBackdropLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<p class="modal-title">1. LOG IN or subscribe</p>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<div class="login-form-outer">
-							<div class="form-holder">
-								<form>
-									<div class="row form-row">
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label>Social title</label>
-												<div class="custom-checkbox-outer d-flex">
-													<label class="custom-checkbox-holder">
-														<input type="radio" class="custom-checkbox" id="male"
-															name="social-title">
-														<span></span>
-														<em>Male</em>
-													</label>
-													<label class="custom-checkbox-holder">
-														<input type="radio" class="custom-checkbox" id="female"
-															name="social-title">
-														<span></span>
-														<em>Female</em>
-													</label>
-													<label class="custom-checkbox-holder">
-														<input type="radio" class="custom-checkbox" id="other"
-															name="social-title">
-														<span></span>
-														<em>Other</em>
-													</label>
-												</div>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label for="firstName">First name *</label>
-												<input type="name" class="form-control" id="firstName"
-													placeholder="First name" required>
-												<i class="bar"></i>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label for="lastName">Last name *</label>
-												<input type="name" class="form-control" id="lastName"
-													placeholder="Last name" required>
-												<i class="bar"></i>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label for="email">Email *</label>
-												<input type="name" class="form-control" id="email" placeholder="Email"
-													required>
-												<i class="bar"></i>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label for="registerPassword">Password *</label>
-												<div class="password-field-holder">
-													<input type="password" class="form-control" id="registerPassword"
-														placeholder="Password" required>
-													<i class="bar"></i>
-													<div class="password-toggle">
-														<i class="las la-eye-slash" id="registerPasswordToggle"></i>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label for="birthDate">Birthdate <span>We will have a special gift for
-														you!</span></label>
-												<input type="text" class="form-control datepicker"
-													placeholder="Birthdate" id="birthDate">
-												<i class="bar"></i>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="acceptence-filed input-field">
-												<div class="custom-checkbox-outer d-flex">
-													<label class="custom-checkbox-holder">
-														<input type="checkbox" class="custom-checkbox"
-															id="newsLetterAcceptance" name="social-title">
-														<span></span>
-														<em>Sign up for our newsletter</em>
-													</label>
-												</div>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="submit-field text-center">
-												<button type="submit" class="btn btn-black">SAVE</button>
-											</div>
-										</div>
-										<!-- form-col -->
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- subscribe-modal -->
 		<!-- payment-modal -->
-		<div class="modal fade" id="paymentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		<div class="modal fade" id="paymentModalTwo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
 			aria-labelledby="staticBackdropLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
@@ -408,117 +227,54 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<div class="payment-process-outer">
-							<div class="row">
-								<!-- col -->
-								<div class="col-lg-4 col-md-6 col-12">
-									<div class="payment-process-card text-center">
-										<figure>
-											<img src="assets/images/paymenty-process-icon-01.svg" alt="">
-										</figure>
-										<p>easy pay and refund</p>
-									</div>
-								</div>
-								<!-- col -->
-								<!-- col -->
-								<div class="col-lg-4 col-md-6 col-12">
-									<div class="payment-process-card text-center">
-										<figure>
-											<img src="assets/images/paymenty-process-icon-02.svg" alt="">
-										</figure>
-										<p>secure checkout</p>
-									</div>
-								</div>
-								<!-- col -->
-								<!-- col -->
-								<div class="col-lg-4 col-md-6 col-12">
-									<div class="payment-process-card text-center">
-										<figure>
-											<img src="assets/images/paymenty-process-icon-03.svg" alt="">
-										</figure>
-										<p>48H shipping</p>
-									</div>
-								</div>
-								<!-- col -->
+						<div class="payment-summary-data">
+							<div class="title">
+								<p>TOTAL</p>
 							</div>
-							<div class="payment-instruction text-center">
-								<a href="javscript:void(0)" class="payment-instruction-btn">Read more</a>
-								<div class="details-data">
-									<p><strong> Please note that your bank details will be requested to validate your
-											registration. They will be kept until the draw.</strong> (Depending on your
-										bank, the bank
-										imprint will generate a debit or not).
-										If you are lucky enough to be one of the winners, your order will
-										be automatically
-										validated and you will be debited for the total amount of your order (including
-										your
-										order and shipping costs).
-										If you are not lucky enough to be one of the winners, you will receive an email
-										telling you so and <strong> you will be refunded</strong> if you have not been
-										charged.</p>
+							<div class="payment-breakup-info">
+								<div class="item-data d-flex justify-content-between align-items-center">
+									<p>1 item</p>
+									<span>€690,00</span>
+								</div>
+								<div class="item-data d-flex justify-content-between align-items-center">
+									<p>Standard shipping</p>
+									<span>€10,00</span>
+								</div>
+								<div class="item-data d-flex justify-content-between align-items-center">
+									<p>Total</p>
+									<span class="total-price">€700,00</span>
 								</div>
 							</div>
 						</div>
-						<div class="login-form-outer">
+						<div class="login-form-outer payment-form-outer">
 							<div class="form-holder">
 								<form>
 									<div class="row form-row">
 										<!-- form-col -->
 										<div class="col-12">
 											<div class="input-field">
-												<label for="paymentFirstName">First name *</label>
-												<input type="name" class="form-control" id="paymentFirstName"
-													placeholder="First name" required>
-												<i class="bar"></i>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label for="paymentLastName">Last name *</label>
-												<input type="name" class="form-control" id="paymentLastName"
-													placeholder="Last name" required>
-												<i class="bar"></i>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label for="phone">Phone number *</label>
-												<input type="tel" class="form-control" id="phone"
-													placeholder="Phone number" required>
-												<i class="bar"></i>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label for="company">Company *</label>
-												<input type="text" class="form-control" id="company"
-													placeholder="Company" required>
-												<i class="bar"></i>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label for="shippingAddress">Shipping address*</label>
-												<input type="text" class="form-control" placeholder="Shipping address*"
-													id="shippingAddress">
-												<i class="bar"></i>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label for="billingAddress">Billing address*</label>
-												<input type="text" class="form-control" placeholder="Billing address*"
-													id="billingAddress">
+												<div class="label-holder d-flex align-items-center">
+													<label for="cardNumber">Your card*</label>
+													<figure>
+														<img src="assets/images/card-pic.png" alt="">
+													</figure>
+												</div>
+
+												<div class="row">
+													<div class="col-lg-6 col-md-6 col-12">
+														<input type="number" class="form-control" id="cardNumber"
+															placeholder="Card number" required>
+													</div>
+													<div class="col-lg-3 col-md-6 col-12">
+														<input type="number" class="form-control" id="cardExpiry"
+															placeholder="MM/YY" required>
+													</div>
+													<div class="col-lg-3 col-md-6 col-12">
+														<input type="number" class="form-control" id="cardcvv"
+															placeholder="CVV" required>
+													</div>
+												</div>
+
 												<i class="bar"></i>
 											</div>
 										</div>
@@ -526,33 +282,14 @@
 										<!-- form-col -->
 										<div class="col-12">
 											<div class="acceptence-filed input-field">
-												<div class="custom-checkbox-outer d-flex">
+												<div class="custom-checkbox-outer mt-0 d-flex">
 													<label class="custom-checkbox-holder">
 														<input type="checkbox" class="custom-checkbox"
 															id="addressConfirm" name="addressConfirm">
 														<span></span>
-														<em>Same as the shipping address</em>
-													</label>
-												</div>
-											</div>
-										</div>
-										<!-- form-col -->
-										<!-- form-col -->
-										<div class="col-12">
-											<div class="input-field">
-												<label>Number of products*</label>
-												<div class="custom-checkbox-outer d-flex">
-													<label class="custom-checkbox-holder">
-														<input type="radio" class="custom-checkbox" id="product1"
-															name="product-count">
-														<span></span>
-														<em>1</em>
-													</label>
-													<label class="custom-checkbox-holder">
-														<input type="radio" class="custom-checkbox" id="product2"
-															name="product-count">
-														<span></span>
-														<em>2</em>
+														<em>I agree to the  <a href="javascript:void"
+																target="_blank">The drop’s subscribing
+																condition</a></em>
 													</label>
 												</div>
 											</div>
@@ -575,6 +312,36 @@
 			</div>
 		</div>
 		<!-- payment-modal -->
+
+		<!-- payment-modal -->
+		<div class="modal fade" id="registrationSuccess" data-bs-backdrop="static" data-bs-keyboard="false"
+			tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<p class="modal-title">3. REGISTRATION COMPLETED</p>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="registration-success-data">
+							<p>You will <strong> receive an email</strong> to inform you of the results of the draw. If
+								you are one of the
+								winners your order will be <strong> validated</strong> and you will be <strong> debited
+									for the total amount</strong> of
+								your order.</p>
+							<div class="btn-holder text-center">
+								<a href="javscript:void" class="btn btn-outline">Go to shop</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- payment-modal -->
+
+
+
 		<!-- jquery-library -->
 		<script src="assets/js/jquery-3.2.1.min.js"></script>
 		<!-- Bootstrap-library-->
