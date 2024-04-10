@@ -1,321 +1,322 @@
 ; (function ($) {
     gsap.registerPlugin(ScrollTrigger)
-    function defaultAnimationGsap() {
-        if ($(".anim-item-y").length) {
-            gsap.set(".anim-item-y", { opacity: 0, y: 250 })
-            ScrollTrigger.batch(".anim-item-y", {
-                //start: "top 85%",
-                onEnter: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        y: 0,
-                        duration: 0.75,
-                        stagger: { each: 0.15, grid: [1, 3] },
-                        overwrite: true,
-                    }),
-                onLeave: (batch) =>
-                    gsap.set(batch, { opacity: 0, y: -250, overwrite: true }),
-                onEnterBack: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        y: 0,
-                        duration: 0.75,
-                        stagger: 0.15,
-                        overwrite: true,
-                    }),
-                onLeaveBack: (batch) =>
-                    gsap.set(batch, { opacity: 0, y: 250, overwrite: true }),
-                //markers: true,
-            })
-            ScrollTrigger.addEventListener("refreshInit", () =>
-                gsap.set(".anim-item-y", { opacity: 1, y: 0 })
-            )
-        }
+    if ($(window).width() > 767) {
+        function defaultAnimationGsap() {
+            if ($(".anim-item-y").length) {
+                gsap.set(".anim-item-y", { opacity: 0, y: 250 })
+                ScrollTrigger.batch(".anim-item-y", {
+                    //start: "top 85%",
+                    onEnter: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.75,
+                            stagger: { each: 0.15, grid: [1, 3] },
+                            overwrite: true,
+                        }),
+                    onLeave: (batch) =>
+                        gsap.set(batch, { opacity: 0, y: -250, overwrite: true }),
+                    onEnterBack: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.75,
+                            stagger: 0.15,
+                            overwrite: true,
+                        }),
+                    onLeaveBack: (batch) =>
+                        gsap.set(batch, { opacity: 0, y: 250, overwrite: true }),
+                    //markers: true,
+                })
+                ScrollTrigger.addEventListener("refreshInit", () =>
+                    gsap.set(".anim-item-y", { opacity: 1, y: 0 })
+                )
+            }
 
-        if ($(".anim-item-top").length) {
-            gsap.set(".anim-item-top", { opacity: 0, y: -250 })
-            ScrollTrigger.batch(".anim-item-top", {
-                onEnter: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        y: 0,
-                        duration: 0.75,
-                        stagger: { each: 0.15, grid: [1, 3] },
-                        overwrite: true,
-                    }),
-                onLeave: (batch) =>
-                    gsap.set(batch, { opacity: 0, y: 250, overwrite: true }),
-                onEnterBack: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        y: 0,
-                        duration: 0.75,
-                        stagger: 0.15,
-                        overwrite: true,
-                    }),
-                onLeaveBack: (batch) =>
-                    gsap.set(batch, { opacity: 0, y: -250, overwrite: true }),
-            })
-            ScrollTrigger.addEventListener("refreshInit", () =>
-                gsap.set(".anim-item-top", { opacity: 1, y: 0 })
-            )
-        }
+            if ($(".anim-item-top").length) {
+                gsap.set(".anim-item-top", { opacity: 0, y: -250 })
+                ScrollTrigger.batch(".anim-item-top", {
+                    onEnter: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.75,
+                            stagger: { each: 0.15, grid: [1, 3] },
+                            overwrite: true,
+                        }),
+                    onLeave: (batch) =>
+                        gsap.set(batch, { opacity: 0, y: 250, overwrite: true }),
+                    onEnterBack: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.75,
+                            stagger: 0.15,
+                            overwrite: true,
+                        }),
+                    onLeaveBack: (batch) =>
+                        gsap.set(batch, { opacity: 0, y: -250, overwrite: true }),
+                })
+                ScrollTrigger.addEventListener("refreshInit", () =>
+                    gsap.set(".anim-item-top", { opacity: 1, y: 0 })
+                )
+            }
 
-        if ($(".anim-item-left").length) {
-            gsap.set(".anim-item-left", { opacity: 0, x: -250 })
-            ScrollTrigger.batch(".anim-item-left", {
-                onEnter: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        x: 0,
-                        duration: 0.75,
-                        stagger: { each: 0.15, grid: [1, 3] },
-                        overwrite: true,
-                    }),
-                onLeave: (batch) =>
-                    gsap.set(batch, { opacity: 0, x: 250, overwrite: true }),
-                onEnterBack: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        x: 0,
-                        duration: 0.75,
-                        stagger: 0.15,
-                        overwrite: true,
-                    }),
-                onLeaveBack: (batch) =>
-                    gsap.set(batch, { opacity: 0, x: -250, overwrite: true }),
-            })
-            ScrollTrigger.addEventListener("refreshInit", () =>
-                gsap.set(".anim-item-left", { opacity: 1, x: 0 })
-            )
-        }
+            if ($(".anim-item-left").length) {
+                gsap.set(".anim-item-left", { opacity: 0, x: -250 })
+                ScrollTrigger.batch(".anim-item-left", {
+                    onEnter: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            x: 0,
+                            duration: 0.75,
+                            stagger: { each: 0.15, grid: [1, 3] },
+                            overwrite: true,
+                        }),
+                    onLeave: (batch) =>
+                        gsap.set(batch, { opacity: 0, x: 250, overwrite: true }),
+                    onEnterBack: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            x: 0,
+                            duration: 0.75,
+                            stagger: 0.15,
+                            overwrite: true,
+                        }),
+                    onLeaveBack: (batch) =>
+                        gsap.set(batch, { opacity: 0, x: -250, overwrite: true }),
+                })
+                ScrollTrigger.addEventListener("refreshInit", () =>
+                    gsap.set(".anim-item-left", { opacity: 1, x: 0 })
+                )
+            }
 
-        if ($(".anim-item-right").length) {
-            gsap.set(".anim-item-right", { opacity: 0, x: 250 })
-            ScrollTrigger.batch(".anim-item-right", {
-                onEnter: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        x: 0,
-                        duration: 0.75,
-                        stagger: { each: 0.15, grid: [1, 3] },
-                        overwrite: true,
-                    }),
-                onLeave: (batch) =>
-                    gsap.set(batch, { opacity: 0, x: -250, overwrite: true }),
-                onEnterBack: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        x: 0,
-                        duration: 0.75,
-                        stagger: 0.15,
-                        overwrite: true,
-                    }),
-                onLeaveBack: (batch) =>
-                    gsap.set(batch, { opacity: 0, x: 250, overwrite: true }),
-            })
-            ScrollTrigger.addEventListener("refreshInit", () =>
-                gsap.set(".anim-item-right", { opacity: 1, x: 0 })
-            )
-        }
+            if ($(".anim-item-right").length) {
+                gsap.set(".anim-item-right", { opacity: 0, x: 250 })
+                ScrollTrigger.batch(".anim-item-right", {
+                    onEnter: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            x: 0,
+                            duration: 0.75,
+                            stagger: { each: 0.15, grid: [1, 3] },
+                            overwrite: true,
+                        }),
+                    onLeave: (batch) =>
+                        gsap.set(batch, { opacity: 0, x: -250, overwrite: true }),
+                    onEnterBack: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            x: 0,
+                            duration: 0.75,
+                            stagger: 0.15,
+                            overwrite: true,
+                        }),
+                    onLeaveBack: (batch) =>
+                        gsap.set(batch, { opacity: 0, x: 250, overwrite: true }),
+                })
+                ScrollTrigger.addEventListener("refreshInit", () =>
+                    gsap.set(".anim-item-right", { opacity: 1, x: 0 })
+                )
+            }
 
-        if ($(".anim-item-clipRight").length) {
-            gsap.set(".anim-item-clipRight", {
-                opacity: 0,
-                clipPath: "inset(0% 100% 0 0)",
-            })
-            ScrollTrigger.batch(".anim-item-clipRight", {
-                start: "top 75%",
-                onEnter: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        clipPath: "inset(0% 0% 0% 0%)",
-                        duration: 0.75,
-                        stagger: { each: 0.15, grid: [1, 3] },
-                        overwrite: true,
-                    }),
-                onLeave: (batch) =>
-                    gsap.set(batch, {
-                        opacity: 0,
-                        clipPath: "inset(0% 100% 0% 0%)",
-                        overwrite: true,
-                    }),
-                onEnterBack: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        clipPath: "inset(0% 0% 0% 0%)",
-                        duration: 0.75,
-                        stagger: 0.15,
-                        overwrite: true,
-                    }),
-                onLeaveBack: (batch) =>
-                    gsap.set(batch, {
-                        opacity: 0,
-                        clipPath: "inset(0% 100% 0% 0%)",
-                        overwrite: true,
-                    }),
-            })
-            ScrollTrigger.addEventListener("refreshInit", () =>
+            if ($(".anim-item-clipRight").length) {
                 gsap.set(".anim-item-clipRight", {
-                    opacity: 1,
-                    clipPath: "inset(0% 0% 0% 0%)",
+                    opacity: 0,
+                    clipPath: "inset(0% 100% 0 0)",
                 })
-            )
-        }
+                ScrollTrigger.batch(".anim-item-clipRight", {
+                    start: "top 75%",
+                    onEnter: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            clipPath: "inset(0% 0% 0% 0%)",
+                            duration: 0.75,
+                            stagger: { each: 0.15, grid: [1, 3] },
+                            overwrite: true,
+                        }),
+                    onLeave: (batch) =>
+                        gsap.set(batch, {
+                            opacity: 0,
+                            clipPath: "inset(0% 100% 0% 0%)",
+                            overwrite: true,
+                        }),
+                    onEnterBack: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            clipPath: "inset(0% 0% 0% 0%)",
+                            duration: 0.75,
+                            stagger: 0.15,
+                            overwrite: true,
+                        }),
+                    onLeaveBack: (batch) =>
+                        gsap.set(batch, {
+                            opacity: 0,
+                            clipPath: "inset(0% 100% 0% 0%)",
+                            overwrite: true,
+                        }),
+                })
+                ScrollTrigger.addEventListener("refreshInit", () =>
+                    gsap.set(".anim-item-clipRight", {
+                        opacity: 1,
+                        clipPath: "inset(0% 0% 0% 0%)",
+                    })
+                )
+            }
 
-        if ($(".anim-item-clipLeft").length) {
-            gsap.set(".anim-item-clipLeft", {
-                opacity: 0,
-                clipPath: "inset(0% 0% 0% 100%)",
-            })
-            ScrollTrigger.batch(".anim-item-clipLeft", {
-                start: "top 75%",
-                onEnter: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        clipPath: "inset(0% 0% 0% 0%)",
-                        duration: 0.75,
-                        stagger: { each: 0.15, grid: [1, 3] },
-                        overwrite: true,
-                    }),
-                onLeave: (batch) =>
-                    gsap.set(batch, {
-                        opacity: 0,
-                        clipPath: "inset(0% 0% 0% 100%)",
-                        overwrite: true,
-                    }),
-                onEnterBack: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        clipPath: "inset(0% 0% 0% 0%)",
-                        duration: 0.75,
-                        stagger: 0.15,
-                        overwrite: true,
-                    }),
-                onLeaveBack: (batch) =>
-                    gsap.set(batch, {
-                        opacity: 0,
-                        clipPath: "inset(0% 0% 0% 100%)",
-                        overwrite: true,
-                    }),
-            })
-            ScrollTrigger.addEventListener("refreshInit", () =>
+            if ($(".anim-item-clipLeft").length) {
                 gsap.set(".anim-item-clipLeft", {
-                    opacity: 1,
-                    clipPath: "inset(0% 0% 0% 0%)",
+                    opacity: 0,
+                    clipPath: "inset(0% 0% 0% 100%)",
                 })
-            )
-        }
+                ScrollTrigger.batch(".anim-item-clipLeft", {
+                    start: "top 75%",
+                    onEnter: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            clipPath: "inset(0% 0% 0% 0%)",
+                            duration: 0.75,
+                            stagger: { each: 0.15, grid: [1, 3] },
+                            overwrite: true,
+                        }),
+                    onLeave: (batch) =>
+                        gsap.set(batch, {
+                            opacity: 0,
+                            clipPath: "inset(0% 0% 0% 100%)",
+                            overwrite: true,
+                        }),
+                    onEnterBack: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            clipPath: "inset(0% 0% 0% 0%)",
+                            duration: 0.75,
+                            stagger: 0.15,
+                            overwrite: true,
+                        }),
+                    onLeaveBack: (batch) =>
+                        gsap.set(batch, {
+                            opacity: 0,
+                            clipPath: "inset(0% 0% 0% 100%)",
+                            overwrite: true,
+                        }),
+                })
+                ScrollTrigger.addEventListener("refreshInit", () =>
+                    gsap.set(".anim-item-clipLeft", {
+                        opacity: 1,
+                        clipPath: "inset(0% 0% 0% 0%)",
+                    })
+                )
+            }
 
-        if ($(".anim-item-clipDown").length) {
-            gsap.set(".anim-item-clipDown", {
-                opacity: 0,
-                clipPath: "inset(0% 0% 100% 0%)",
-            })
-            ScrollTrigger.batch(".anim-item-clipDown", {
-                start: "top 80%",
-                //end: "bottom top",
-                // markers:true,
-                onEnter: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        clipPath: "inset(0% 0% 0% 0%)",
-                        duration: 0.75,
-                        stagger: { each: 0.15, grid: [1, 3] },
-                        overwrite: true,
-                    }),
-                onLeave: (batch) =>
-                    gsap.set(batch, {
-                        opacity: 0,
-                        clipPath: "inset(0% 0% 100% 0% )",
-                        overwrite: true,
-                    }),
-                onEnterBack: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        clipPath: "inset(0% 0% 0% 0%)",
-                        duration: 0.75,
-                        stagger: 0.15,
-                        overwrite: true,
-                    }),
-                onLeaveBack: (batch) =>
-                    gsap.set(batch, {
-                        opacity: 0,
-                        clipPath: "inset(0% 0% 100% 0%)",
-                        overwrite: true,
-                    }),
-            })
-            ScrollTrigger.addEventListener("refreshInit", () =>
+            if ($(".anim-item-clipDown").length) {
                 gsap.set(".anim-item-clipDown", {
-                    opacity: 1,
-                    clipPath: "inset(0% 0% 0% 0%)",
+                    opacity: 0,
+                    clipPath: "inset(0% 0% 100% 0%)",
                 })
-            )
-        }
+                ScrollTrigger.batch(".anim-item-clipDown", {
+                    start: "top 80%",
+                    //end: "bottom top",
+                    // markers:true,
+                    onEnter: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            clipPath: "inset(0% 0% 0% 0%)",
+                            duration: 0.75,
+                            stagger: { each: 0.15, grid: [1, 3] },
+                            overwrite: true,
+                        }),
+                    onLeave: (batch) =>
+                        gsap.set(batch, {
+                            opacity: 0,
+                            clipPath: "inset(0% 0% 100% 0% )",
+                            overwrite: true,
+                        }),
+                    onEnterBack: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            clipPath: "inset(0% 0% 0% 0%)",
+                            duration: 0.75,
+                            stagger: 0.15,
+                            overwrite: true,
+                        }),
+                    onLeaveBack: (batch) =>
+                        gsap.set(batch, {
+                            opacity: 0,
+                            clipPath: "inset(0% 0% 100% 0%)",
+                            overwrite: true,
+                        }),
+                })
+                ScrollTrigger.addEventListener("refreshInit", () =>
+                    gsap.set(".anim-item-clipDown", {
+                        opacity: 1,
+                        clipPath: "inset(0% 0% 0% 0%)",
+                    })
+                )
+            }
 
-        if ($(".anim-item-zoomIn").length) {
-            gsap.set(".anim-item-zoomIn", { opacity: 0, scale: 1.3 })
-            ScrollTrigger.batch(".anim-item-zoomIn", {
-                start: "top 75%",
-                onEnter: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        scale: 1,
-                        duration: 0.75,
-                        stagger: { each: 0.15, grid: [1, 3] },
-                        overwrite: true,
-                    }),
-                onLeave: (batch) =>
-                    gsap.set(batch, { opacity: 1, scale: 1.3, overwrite: true }),
-                onEnterBack: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        scale: 1,
-                        duration: 0.75,
-                        stagger: 0.15,
-                        overwrite: true,
-                    }),
-                onLeaveBack: (batch) =>
-                    gsap.set(batch, { opacity: 1, scale: 1.3, overwrite: true }),
-            })
-            ScrollTrigger.addEventListener("refreshInit", () =>
-                gsap.set(".anim-item-zoomIn", { opacity: 1, scale: 1 })
-            )
-        }
+            if ($(".anim-item-zoomIn").length) {
+                gsap.set(".anim-item-zoomIn", { opacity: 0, scale: 1.3 })
+                ScrollTrigger.batch(".anim-item-zoomIn", {
+                    start: "top 75%",
+                    onEnter: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.75,
+                            stagger: { each: 0.15, grid: [1, 3] },
+                            overwrite: true,
+                        }),
+                    onLeave: (batch) =>
+                        gsap.set(batch, { opacity: 1, scale: 1.3, overwrite: true }),
+                    onEnterBack: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.75,
+                            stagger: 0.15,
+                            overwrite: true,
+                        }),
+                    onLeaveBack: (batch) =>
+                        gsap.set(batch, { opacity: 1, scale: 1.3, overwrite: true }),
+                })
+                ScrollTrigger.addEventListener("refreshInit", () =>
+                    gsap.set(".anim-item-zoomIn", { opacity: 1, scale: 1 })
+                )
+            }
 
-        if ($(".anim-item-zoomOut").length) {
-            gsap.set(".anim-item-zoomOut", { opacity: 0, scale: 0 })
-            ScrollTrigger.batch(".anim-item-zoomOut", {
-                start: "top 75%",
-                //end: "bottom top",
-                //markers:true,
-                onEnter: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        scale: 1,
-                        duration: 0.75,
-                        stagger: { each: 0.15, grid: [1, 3] },
-                        overwrite: true,
-                    }),
-                onLeave: (batch) =>
-                    gsap.set(batch, { opacity: 1, scale: 0, overwrite: true }),
-                onEnterBack: (batch) =>
-                    gsap.to(batch, {
-                        opacity: 1,
-                        scale: 1,
-                        duration: 0.75,
-                        stagger: 0.15,
-                        overwrite: true,
-                    }),
-                onLeaveBack: (batch) =>
-                    gsap.set(batch, { opacity: 1, scale: 0, overwrite: true }),
-            })
-            ScrollTrigger.addEventListener("refreshInit", () =>
-                gsap.set(".anim-item-zoomOut", { opacity: 1, scale: 1 })
-            )
+            if ($(".anim-item-zoomOut").length) {
+                gsap.set(".anim-item-zoomOut", { opacity: 0, scale: 0 })
+                ScrollTrigger.batch(".anim-item-zoomOut", {
+                    start: "top 75%",
+                    //end: "bottom top",
+                    //markers:true,
+                    onEnter: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.75,
+                            stagger: { each: 0.15, grid: [1, 3] },
+                            overwrite: true,
+                        }),
+                    onLeave: (batch) =>
+                        gsap.set(batch, { opacity: 1, scale: 0, overwrite: true }),
+                    onEnterBack: (batch) =>
+                        gsap.to(batch, {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.75,
+                            stagger: 0.15,
+                            overwrite: true,
+                        }),
+                    onLeaveBack: (batch) =>
+                        gsap.set(batch, { opacity: 1, scale: 0, overwrite: true }),
+                })
+                ScrollTrigger.addEventListener("refreshInit", () =>
+                    gsap.set(".anim-item-zoomOut", { opacity: 1, scale: 1 })
+                )
+            }
         }
     }
-
     jQuery(document).ready(function () {
         defaultAnimationGsap()
         // sticky_header
@@ -403,7 +404,7 @@
     })
 
     // Shoew Modal
-    /*var myModal = new bootstrap.Modal(document.getElementById("registrationSuccess"), {})
+    /*var myModal = new bootstrap.Modal(document.getElementById("paymentModalTwo"), {})
     myModal.show()*/
     // Password Toggle
     jQuery(function () {

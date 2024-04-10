@@ -2,12 +2,16 @@
 
 @media (max-width: 991px) {
 	.logo {
-		width: 250px;
+		width: 150px;
 		display: block;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	.sticky .logo {
-		width: 240px;
+		width: 150px;
+		position: absolute;
 	}
 
 	.nav_holder {
@@ -230,6 +234,22 @@
 	.sale-countdown-banner-wrapper .banner-media {
 		height: calc(100vh - 83px);
 	}
+	.sale-end-banner-wrapper .coundwon-data-outer h1 {
+		font-size: 80px;
+	}
+	.coundwon-data-outer h2 {
+		font-size: 90px;
+	}
+	.toy-information-data,
+	.the-travel-data,
+	.unique-color-data {
+		max-width: 330px;
+	}
+	.toy-information-data .title h2,
+	.the-travel-data h2,
+	.unique-color-data h2 {
+		font-size: 38px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -286,5 +306,113 @@
 		margin-top: 20px;
 		max-width: 150px;
 		margin-left: auto;
+	}
+	.sale-end-banner-wrapper .coundwon-data-outer h1 {
+		font-size: 60px;
+	}
+	.sale-end-banner-wrapper .banner-media {
+		height: 430px;
+	}
+	.toy-information-wrapper .toy-media,
+	.the-travel-wrapper .the-travel-media,
+	.unique-color-wrapper .unique-color-media {
+		position: static;
+		width: 100%;
+	}
+	.toy-information-wrapper .toy-media img,
+	.the-travel-wrapper .the-travel-media img,
+	.unique-color-wrapper .unique-color-media img {
+		position: static;
+	}
+	.toy-information-data,
+	.the-travel-data,
+	.unique-color-data {
+		max-width: 100%;
+		padding: 30px 0;
+	}
+	.toy-information-data .title h2,
+	.the-travel-data h2,
+	.unique-color-data h2 {
+		font-size: 48px;
+	}
+	.toy-information-data .price p {
+		margin: 20px 0;
+	}
+	.toy-meta-data li {
+		justify-content: flex-start;
+		gap: 0 4px;
+	}
+	.toy-meta-data li span {
+		text-align: left;
+	}
+	.toy-meta-data {
+		margin-bottom: 40px;
+	}
+	.toy-additional-notes p {
+		text-align: center;
+	}
+	.toy-information-data .register-btn {
+		text-align: center;
+	}
+	.the-travel-data {
+		padding: 70px 0;
+	}
+	.how-it-works-wrapper {
+		padding: 70px 0;
+	}
+	.how-it-works-wrapper .section-heading h2 {
+		font-size: 22px;
+	}
+	.draw-process-card {
+		padding-right: 0;
+	}
+	.how-it-works-wrapper [class*="col-"]:not(:last-child) {
+		margin-bottom: 70px;
+	}
+	.footer-top-row {
+		flex-direction: column-reverse;
+		gap: 35px 0;
+		text-align: center;
+	}
+	.footer-site-links li:last-child {
+		padding-right: 0;
+		margin-right: 0;
+	}
+	.footer-bottom-row .holder {
+		flex-direction: column-reverse;
+		gap: 80px 0;
+	}
+	.footer-bottom-row .banner-newsletter-outer .title p {
+		text-align: center;
+	}
+	.sticky .logo {
+		width: 100px;
+	}
+	.payment-process-card {
+		max-width: 100%;
+	}
+	.modal-body {
+		padding: 0 30px 60px;
+	}
+	.modal-header {
+		padding: 30px 30px;
+	}
+	.payment-summary-data {
+		padding: 30px;
+	}
+	.payment-form-outer .row .row [class*="col-"] {
+		margin-bottom: 16px;
+	}
+	.payment-form-outer
+		.custom-checkbox-holder
+		input[type="checkbox"]
+		+ span
+		+ em {
+		display: inline-block;
+	}
+	.payment-form-outer .label-holder {
+		flex-direction: column;
+		align-items: flex-start !important;
+		gap: 10px 0;
 	}
 }
